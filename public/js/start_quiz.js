@@ -183,8 +183,7 @@ document.getElementById("startQuiz").addEventListener("click", async () => {
     };
 
     try {
-      const BASE_URL = "https://smart-quiz-1.onrender.com";
-      const response = await fetch(`${BASE_URL}/start_quiz`, {
+      const response = await fetch("/start_quiz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(quizConfig),
