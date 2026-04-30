@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="./css/common_style.css">
+  <link rel="stylesheet" href="./css/profile.css">
+  <link rel="stylesheet" href="./css/loader.css">
+
+</head>
+
+<body>
+
+  <!-- Loader  -->
+  <div id="loader" style="display: none;">
+    <div class="spinner"></div>
+    <span>loading text...</span>
+  </div>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="./Assets/quiz_logo.jpg" width="22" style="border-radius: 5px;">
+      Smart Quiz
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="start_quiz.html">Start Quiz</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </div>
+
+  <section class="header-section">
+    <div class="header">
+      <div class="container">
+        <h1 class="section-title">User Profile</h1>
+        <p>Manage your account, view statistics, and track your progress</p>
+      </div>
+  </section>
+
+  <!-- Edit Profile  -->
+  <div class="main">
+    <div class="left">
+      <section class="edit-profile-section">
+        <div class="container">
+          <div class="profile">
+            <div id="imageOfUserProfile"></div>
+            <h4 style="font-size: 2em;" id="userName">Kakdiya Utsav</h4>
+            <p id="profileUserEmail">gautambhai@gmail.com</p>
+            <p id="membershipSince">Member since January 2026</p>
+            <!-- <button class="edit-btn btn-dark" id="edit-profile"><img src="./Assets/edit.png"
+                style="border-radius: 0;">Edit
+              Profile</button> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="performance-seciton">
+        <div class="container">
+          <div class="performance-card">
+            <div class="performance-header">
+              <img src="./Assets/performance.png" width="20" style="margin-top: 15px;">
+              <h4>Performance Status</h4>
+            </div>
+            <div class="performance-main">
+              <div class="performance-content per-green">
+                <img src="./Assets/performance1.png">
+                <div class="performance-text">
+                  <h5>Total Quizzes</h5>
+                  <p id="totalQuizzes">47</p>
+                </div>
+              </div>
+              <div class="performance-content per-green">
+                <img src="./Assets/performance2.png">
+                <div class="performance-text">
+                  <h5>Overall Accuracy</h5>
+                  <p id="overallAccuracy">82%</p>
+                </div>
+              </div>
+              <div class="performance-content per-yellow">
+                <img src="./Assets/performance3.png">
+                <div class="performance-text">
+                  <h5>Favorite Subject</h5>
+                  <p id="favoriteSubject">Mathematics</p>
+                </div>
+              </div>
+              <div class="performance-content per-yellow" style="margin-bottom: 0px;">
+                <img src="./Assets/performance4.png">
+                <div class="performance-text">
+                  <h5>Total Questions Attempted</h5>
+                  <p id="totalQuestionAttempted">12</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <section class="quick-action-section">
+    <div class="container">
+      <div class="action-card">
+        <h4>Quick Actions</h4>
+        <div class="action-buttons">
+          <a href="start_quiz.html">
+            <button class="action-btn-first btn btn-primary" style="font-size: 1.2em;">Start New Quiz</button>
+          </a>
+          <a href="analytics.html">
+            <button class="action-btn-second btn btn-dark" style="font-size: 1.2em;">View Analytics</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+    </div>
+
+    <div class="right">
+      <section class="quiz-history-section">
+        <div class="container">
+          <div class="history-card">
+            <div class="history-header">
+              <div class="title">
+                <span><img src="./Assets/easy.png" width="20" style="margin-top: 15px;"></span>
+                <h3>Recent Quiz History</h3>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th>Difficulty</th>
+                  <th>Score</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+
+              <tbody id="tableBody">
+                <!-- <tr>
+                  <td>Dec 27, 2024</td>
+                  <td>Mathematics</td>
+                  <td>Medium</td>
+                  <td class="score green">85% <span>(17/20)</span></td>
+                  <td>12:45</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="progress-section">
+        <div class="container">
+          <div class="progess-main">
+              <section class="progress-section">
+                <div class="container">
+                  <div class="progress-card">
+                    <div class="progress-header">
+                      <h4>Subject Performance</h4>
+                    </div>
+                    <div id="subjectPerformanceContainer">
+                    </div>
+                    <hr>
+                    <div class="labels">
+                      <div class="progress-label">
+                        <div class="progress-circle" style="background-color: #25a36f;"></div>
+                        <p>Excellent (>75%)</p>
+                      </div>
+                      <div class="progress-label">
+                        <div class="progress-circle" style="background-color: #FFA500;"></div>
+                        <p>Good (50-75%)</p>
+                      </div>
+                      <div class="progress-label">
+                        <div class="progress-circle" style="background-color: #FF0000;"></div>
+                        <p>Needs Work (&lt;50%) </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+
+<div class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 15px;">
+          <img src="./Assets/quiz_logo.jpg" width="22" style="border-radius: 5px;">
+          Smart Quiz
+        </div>
+        <p style="color: gainsboro;">Empowering learners with intelligent quiz platforms and comprehensive analytics for
+          continuous
+          improvement.</p>
+      </div>
+      <div>
+        <h4 style="font-family: 'Times New Roman', Times, serif;font-size: 1.3em;">Quick Links</h4>
+        <a href="home.html" style="color: gainsboro;">Home</a>
+        <a href="start_quiz.html" style="color: gainsboro;">Start Quiz</a>
+        <a href="analytics.html" style="color: gainsboro;">Analytics</a>
+      </div>
+      <div>
+        <h4 style="font-family: 'Times New Roman', Times, serif;font-size: 1.3em;">Get in Touch</h4>
+        <p style="color: gainsboro;">smartwebquiz@gmail.com</p>
+        <p style="color: gainsboro;">+91 9510448344</p>
+      </div>
+    </div>
+  </div>
+    <script src="./js/loader.js"></script>
+    <script src="./script.js"></script>
+    <script src="./js/profile.js"></script>
+</body>
+
+</html>

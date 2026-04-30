@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./css/common_style.css">
+    <link rel="stylesheet" href="./css/log_in.css">
+    <link rel="stylesheet" href="./css/loader.css">
+
+</head>
+
+<body>
+
+    <!-- Loader  -->
+    <div id="loader" style="display: none;">
+        <div class="spinner"></div>
+        <span>loading text...</span>
+    </div>
+
+    <div class="container">
+        <div class="main">
+
+            <!-- LEFT -->
+            <div class="left">
+                <h1 style="font-size: 3.2em;">Welcome Back!</h1>
+                <p style="margin-bottom: 20px;">Log in with your Username and password.</p>
+
+                <form id="loginForm" action="/login" method="post">
+
+                    <div class="input-box">
+                        <input type="text" placeholder="name" id="name" name="username">
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" id="password" name="password">
+                    </div>
+
+                    <button class="sign-up-btn btn-dark">Log In</button>
+                </form>
+                <div id="error-message" style="color:red;"></div>
+
+                <div class="register">
+                    Don’t have an account? <a href="index.html">Sign Up</a>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="right">
+                <img src="./Assets/signup.png" alt="quiz Image">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/loader.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
