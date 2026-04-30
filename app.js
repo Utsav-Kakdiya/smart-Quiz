@@ -177,10 +177,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-
-const PORT = process.env.PORT
-
-app.listen(PORT, function () {
+app.listen(process.env.PORT, function () {
   console.log("app.js is listening.");
 });
 
