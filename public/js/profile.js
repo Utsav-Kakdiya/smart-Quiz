@@ -1,8 +1,7 @@
 window.addEventListener("DOMContentLoaded", async () => {
   try {
     const userEmail = localStorage.getItem("userEmail");
-    const BASE_URL = "https://smart-quiz-1.onrender.com";
-    const response = await fetch(`${BASE_URL}/analytics-dashboard/${userEmail}`);
+    const response = await fetch(`/analytics-dashboard/${userEmail}`);
     const data = await response.json();
 
     const container = document.getElementById("subjectPerformanceContainer");
@@ -42,7 +41,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       container.innerHTML += subjectHTML;
     }
 
-    const responseOfHistory = await fetch(`${BASE_URL}/profile-dateHistory/${userEmail}`);
+    const responseOfHistory = await fetch(`/profile-dateHistory/${userEmail}`);
     const dataOfDateHistory = await responseOfHistory.json();
 
     const history = dataOfDateHistory.history;
@@ -75,7 +74,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     );
 
     const performanceStatus = await fetch(
-      `${BASE_URL}/profile-performance-status/${userEmail}`,
+      `/profile-performance-status/${userEmail}`,
     );
     const performanceData = await performanceStatus.json();
 
@@ -87,7 +86,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     let profileUserEmail = document.getElementById("profileUserEmail");
     profileUserEmail.innerText = userEmail;
 
-    const userData = await fetch(`${BASE_URL}/profile-info/${userEmail}`);
+    const userData = await fetch(`/profile-info/${userEmail}`);
     const userInfo = await userData.json();
     let membershipSince = document.getElementById("membershipSince");
     let userName = document.getElementById("userName");
