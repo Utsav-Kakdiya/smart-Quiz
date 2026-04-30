@@ -1,0 +1,180 @@
+/* =======================
+   Global Styles
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #fafffd;
+  color: #1f2937;
+  animation: fadeUp 0.6s ease-out both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-animation {
+    animation: fadeUp 0.6s ease-out both;
+}
+
+
+/* =======================
+   Navbar
+======================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  background: #ffffff;
+  padding: 16px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f766e;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+.nav-profile{
+ margin-top: 10%;
+}
+
+.nav-links a.active {
+  color: #0f766e;
+  border-bottom: 2px solid #0f766e;
+  padding-bottom: 4px;
+}
+
+/* =======================
+   Common Containers
+======================= */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* =======================
+   Buttons
+======================= */
+.btn {
+  padding: 14px 24px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #0f766e;
+  color: white;
+}
+
+.btn-dark {
+  background: #111827;
+  color: white;
+}
+
+.btn-outline {
+  background: white;
+  border: 2px solid #0f766e;
+  color: #0f766e;
+}
+
+/* =======================
+   Cards
+======================= */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+/* =======================
+   Grid Utilities
+======================= */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* =======================
+   Footer
+======================= */
+.footer {
+  background: #111827;
+  color: #d1d5db;
+  padding: 50px 60px;
+  margin-top: 80px;
+  width: 100%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer h4 {
+  color: white;
+  margin-bottom: 14px;
+}
+
+.footer p, .footer a {
+  font-size: 14px;
+  color: #9ca3af;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
