@@ -7,6 +7,8 @@ import User from "./models/users.js";
 import Question from "./models/Question.js";
 import QuizAttempt from "./models/quizAttemps.js";
 
+const BASE_URL = "https://smart-quiz-1.onrender.com";
+
 dotenv.config();
 const app = express();
 
@@ -21,7 +23,7 @@ await mongoose.connect(process.env.MONGO_URL);
 console.log("MongoDB connected");
 
 // Sign Up the User
-app.post("https://smart-quiz-1.onrender.com/register", async (req, res) => {
+app.post(`${BASE_URL}/register`, async (req, res) => {
   try {
     const { name, phone, email, password } = req.body;
 
@@ -100,7 +102,7 @@ app.post("https://smart-quiz-1.onrender.com/register", async (req, res) => {
   }
 });
 
-app.post("https://smart-quiz-1.onrender.com/verify-otp", async (req, res) => {
+app.post(`${BASE_URL}/verify-otp`, async (req, res) => {
   const { email, otp } = req.body;
 
   if (!otpStore.has(email)) {
@@ -140,7 +142,7 @@ app.post("https://smart-quiz-1.onrender.com/verify-otp", async (req, res) => {
 
 // Log In the User
 
-app.post("/login", async (req, res) => {
+app.post(`${BASE_URL}/login`, async (req, res) => {
   try {
     const { username, password } = req.body;
 
@@ -182,7 +184,7 @@ app.listen(process.env.PORT, function () {
 });
 
 // Send questions
-app.post("/start_quiz", async (req, res) => {
+app.post(`${BASE_URL}/start_quiz`, async (req, res) => {
   try {
     const { subjects, level, questionCount } = req.body;
 
@@ -230,7 +232,7 @@ app.post("/start_quiz", async (req, res) => {
   }
 });
 
-app.post("/submit_quiz", async (req, res) => {
+app.post(`${BASE_URL}/submit_quiz`, async (req, res) => {
   try {
     const {
       userEmail,
@@ -275,7 +277,7 @@ app.post("/submit_quiz", async (req, res) => {
   }
 });
 
-app.get("/analytics-dashboard/:email", async (req, res) => {
+app.get(`${BASE_URL}/analytics-dashboard/:email`, async (req, res) => {
   try {
     const email = req.params.email;
 
@@ -381,7 +383,7 @@ app.get("/analytics-dashboard/:email", async (req, res) => {
   }
 });
 
-app.get("/profile-dateHistory/:email", async (req, res) => {
+app.get(`${BASE_URL}/profile-dateHistory/:email`, async (req, res) => {
   try {
     const email = req.params.email;
 
@@ -419,7 +421,7 @@ app.get("/profile-dateHistory/:email", async (req, res) => {
   }
 });
 
-app.get("/profile-performance-status/:email" , async (req,res) => {
+app.get(`${BASE_URL}/profile-performance-status/:email` , async (req,res) => {
   try {
     
     const email = req.params.email;
@@ -477,7 +479,7 @@ app.get("/profile-performance-status/:email" , async (req,res) => {
   }
 })
 
-app.get("/profile-info/:email", async (req, res) => {
+app.get(`${BASE_URL}/profile-info/:email`, async (req, res) => {
   try {
 
     const email = req.params.email;
