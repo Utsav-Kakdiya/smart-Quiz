@@ -307,7 +307,8 @@ async function submitQuiz(isTimeUp = false) {
 
   displayLoader();
   try {
-    const response = await fetch("/submit_quiz", {
+    const BASE_URL = "https://smart-quiz-1.onrender.com";
+    const response = await fetch(`${BASE_URL}/submit_quiz`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(submitQuizData),
