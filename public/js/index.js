@@ -66,13 +66,13 @@ function sendDataToDatabase(data) {
     .then((res) => res.json())
     .then((result) => {
       const msg = document.getElementById("error-message");
+      hideLoader();
 
       if (result.success) {
         // To hide the details fileds 
         let signUp = document.getElementById("signupSection");
         signUp.style.display = "none";
 
-        hideLoader();
 
         // To display otp field 
         let otpSection = document.getElementById("otpverification")
@@ -90,6 +90,7 @@ function sendDataToDatabase(data) {
       }
     })
     .catch((err) => {
+      hideLoader();
       console.error(err);
     });
 }
