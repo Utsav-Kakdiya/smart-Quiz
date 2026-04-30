@@ -112,7 +112,7 @@ document
     try {
       displayLoader("Verifying OTP...");
 
-      const res = await fetch("/verify-otp", {
+      const res = await fetch("https://smart-quiz-1.onrender.com/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
