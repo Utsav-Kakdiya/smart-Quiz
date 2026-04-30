@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Start Quiz</title>
+  <link rel="stylesheet" href="./css/common_style.css">
+  <link rel="stylesheet" href="./css/start_quiz.css">
+  <link rel="stylesheet" href="./css/loader.css">
+
+</head>
+
+<body>
+
+  <!-- Loader  -->
+  <div id="loader" style="display: none;">
+    <div class="spinner"></div>
+    <span>loading text...</span>
+  </div>
+  
+  <div class="navbar">
+    <div class="logo">
+      <img src="./Assets/quiz_logo.jpg" width="22" style="border-radius: 5px;">
+      Smart Quiz
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="start_quiz.html">Start Quiz</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </div>
+  <section class="header">
+
+    <div class="container">
+      <h1 class="section-title" align="center" style="margin-top: 65px;">Configure Your Quiz</h1>
+      <p class="section-subtitle" align="center">Select your preferred subject and difficulty level to customize your
+        quiz
+        experience</p>
+
+      <!-- Progress Bar -->
+      <div class="progrss-bar">
+        <div class="progress-text">
+          <p>Configuration Progress</p>
+          <span></span>
+        </div>
+        <div class="progress">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects -->
+  <section class="Subject-Selection">
+    <div class="container">
+      <div class="subjects">
+        <h3><img src="./Assets/book.png" width="20" style="margin-right: 8px;">Select Subject</h3>
+        <p>Choose the subject area you want to be tested on</p>
+        <div class="grid-3">
+          <div class="card" data-subject-name="Mathematics">
+            <img src="./Assets/subject1.png">
+            <h3>Mathematics</h3>
+            <p>Algebra, Geometry, Calculus</p>
+          </div>
+          <div class="card" data-subject-name="Science">
+            <img src="./Assets/subject2.png">
+            <h3>Science</h3>
+            <p>Physics, Chemistry, Biology</p>
+          </div>
+          <div class="card" data-subject-name="History">
+            <img src="./Assets/feature3.png">
+            <h3>History</h3>
+            <p>World History, Ancient Civilizations</p>
+          </div>
+          <div class="card" data-subject-name="Geography">
+            <img src="./Assets/subject4.png">
+            <h3>Geography</h3>
+            <p>Physical, Political, Cultural</p>
+          </div>
+          <div class="card" data-subject-name="Literature">
+            <img src="./Assets/subject5.png">
+            <h3>Literature</h3>
+            <p>Classic & Modern Works</p>
+          </div>
+          <div class="card" data-subject-name="General Knowledge">
+            <img src="./Assets/subject6.png">
+            <h3>General Knowledge</h3>
+            <p>Current Affairs, Trivia</p>
+          </div>
+          <div class="card" data-subject-name="Sports">
+            <img src="./Assets/subject7.png">
+            <h3>Sports</h3>
+            <p>Athletes and teamsRules and terminology</p>
+          </div>
+          <div class="card" data-subject-name="Animals/Nature">
+            <img src="./Assets/subject8.png">
+            <h3>Animals/Nature</h3>
+            <p>Birds, Mammals, Reptiles, Forests, Oceans</p>
+          </div>
+          <div class="card" data-subject-name="Technology and Inventions">
+            <img src="./Assets/subject9.png">
+            <h3>Technology and Inventions</h3>
+            <p>Famous Inventors and Classic Inventions</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <br>
+  </section>
+  <!-- Difficulty -->
+  <section class="Difficulty-Selection">
+    <div class="container">
+      <div class="levels">
+        <h3><img src="./Assets/diffifulty.png" width="20" style="margin-right: 8px;">Select Difficulty Level</h3>
+        <p>Choose the challenge level that matches your expertisen</p>
+        <div class="grid-3">
+          <div class="card level-card level-easy" data-level-name="Easy">
+            <div class="level-header">
+              <div class="level-header-start">
+                <div class="level-dot"></div>
+                <h4>Easy</h4>
+              </div>
+              <img src="./Assets/easy.png">
+            </div>
+            <ul>
+              <li>
+                <p>You will have 45 seconds for each question. Total time depends on the number of questions selected.</p>
+              </li>
+              <li>
+                <p>Basic questions</p>
+              </li>
+              <li>
+                <p>There is no negative marking for incorrect answers.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="card level-card level-medium" data-level-name="Medium">
+            <div class="level-header">
+              <div class="level-header-start">
+                <div class="level-dot" style="background-color: #DE7B02;"></div>
+                <h4>Medium</h4>
+              </div>
+              <img src="./Assets/medium.png" style="width:12%">
+            </div>
+            <ul>
+              <li>
+                <p>You will have 60 seconds for each question. Total time depends on the number of questions selected.</p>
+              </li>
+              <li>
+                <p>Moderate questions</p>
+              </li>
+              <li>
+                <p>Each incorrect answer carries a 0.25 negative mark</p>
+              </li>
+            </ul>
+          </div>
+          <div class="card level-card level-hard" data-level-name="Hard">
+            <div class="level-header">
+              <div class="level-header-start">
+                <div class="level-dot" style="background-color: #ff0000;"></div>
+                <h4>Hard</h4>
+              </div>
+              <img src="./Assets/hard.png">
+            </div>
+            <ul>
+              <li>
+                <p>No time limit</p>
+              </li>
+
+              <li>
+                <p>Advanced questions</p>
+              </li>
+
+              <li>
+                <p>Each incorrect answer carries a 0.5 negative mark</p>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <br>
+      </div>
+    </div>
+  </section>
+
+  <!-- Total Number of Questions -->
+
+  <section class="Question-Count">
+    <div class="container">
+
+      <div class="que-count">
+        <h3><img src="./Assets/diffifulty.png" width="20" style="margin-right: 8px;">Select Total Number of questions
+        </h3>
+        <p>Choose how many questions you want in this quiz.</p>
+
+        <div class="counts grid-2">
+
+          <div class="count" data-que-count="10">
+            10
+          </div>
+          <div class="count" data-que-count="20">
+            20
+          </div>
+          <div class="count" data-que-count="30">
+            30 
+          </div>
+          <div class="count" data-que-count="30+">
+            30+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- The below sections will be after succesffuly configuration of the quiz. -->
+  <!-- Rules  -->
+  <section class="rules-section hidden">
+    <div class="container">
+      <div class="rules">
+        <h3>
+          <img src="./Assets/rules.png" width="18" style="margin-right: 8px;">
+          Quiz Rules
+        </h3>
+        <!-- Some rules will be changed as per the selected level  -->
+        <p class="subtext">Please read the rules carefully before starting</p>
+        <div class="rules-list">
+          <div class="rule">
+            <p>
+              <img src="./Assets/right.png">
+              Each question has a 60-second time limit
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary  -->
+  <section class="summary-section hidden">
+    <div class="container">
+      <div class="summary">
+        <h3>
+          <img src="./Assets/summary.png" width="18" style="margin-right: 8px;">
+          Configuration Summary
+        </h3>
+        <div class="summary-cards grid-2">
+          <div class="summary-card">
+            <div class="summary-header">
+              <img src="./Assets/book.png" width="20">
+              <p>Subject</p>
+            </div>
+            <h4 id="summary-subject">Mathematics</h4>
+          </div>
+          <div class="summary-card">
+            <div class="summary-header">
+              <img src="./Assets/diffifulty.png" width="20">
+              <p>Difficulty</p>
+            </div>
+            <h4 id="summary-level">Easy</h4>
+          </div>
+          <div class="summary-card">
+            <div class="summary-header">
+              <img src="./Assets/easy.png" width="20">
+              <p>Total Time</p>
+            </div>
+            <h4 id="summary-time"></h4>
+          </div>
+          <div class="summary-card">
+            <div class="summary-header">
+              <p><span>#</span>Total Questions</p>
+            </div>
+            <h4 id="summary-questions"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Button Configuration -->
+  <section class="btn-configuration">
+    <div class="container">
+
+      <div class="configure-btns">
+        <a href="index.html" style="text-decoration: none;">
+          <button class="btn btn-dark back-btn"><span class="arrow">&#8592;</span>Back to Home</button>
+        </a>
+            <strong style="color: #ff0000;font-size: 1.5em;display: none;" id="configuration-message">Please select a quiz subject!!</strong>
+        <button class="btn btn-primary start-btn" style="font-size: 1.2em;" id="startQuiz">Start Quiz</button>
+      </div>
+    </div>
+  </section>
+
+
+<div class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 15px;">
+          <img src="./Assets/quiz_logo.jpg" width="22" style="border-radius: 5px;">
+          Smart Quiz
+        </div>
+        <p style="color: gainsboro;">Empowering learners with intelligent quiz platforms and comprehensive analytics for
+          continuous
+          improvement.</p>
+      </div>
+      <div>
+        <h4 style="font-family: 'Times New Roman', Times, serif;font-size: 1.3em;">Quick Links</h4>
+        <a href="home.html" style="color: gainsboro;">Home</a>
+        <a href="start_quiz.html" style="color: gainsboro;">Start Quiz</a>
+        <a href="analytics.html" style="color: gainsboro;">Analytics</a>
+      </div>
+      <div>
+        <h4 style="font-family: 'Times New Roman', Times, serif;font-size: 1.3em;">Get in Touch</h4>
+        <p style="color: gainsboro;">smartwebquiz@gmail.com</p>
+        <p style="color: gainsboro;">+91 9510448344</p>
+      </div>
+    </div>
+  </div>
+  <script src="./js/loader.js"></script>
+  <script src="./js/start_quiz.js"></script>
+  <script src="./script.js"></script>
+
+
+</body>
+
+</html>

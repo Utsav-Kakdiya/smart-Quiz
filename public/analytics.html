@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Analytics</title>
+  <link rel="stylesheet" href="./css/common_style.css">
+  <link rel="stylesheet" href="./css/analytics.css">
+  <link rel="stylesheet" href="./css/loader.css">
+
+</head>
+
+<body>
+
+  <!-- Loader  -->
+  <div id="loader" style="display: none;">
+    <div class="spinner"></div>
+    <span>loading text...</span>
+  </div>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="./Assets/quiz_logo.jpg" width="22" style="border-radius: 5px;">
+      Smart Quiz
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="start_quiz.html">Start Quiz</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </div>
+
+  <!-- Header  -->
+  <section class="header">
+    <div class="container">
+      <h2>Performance Analytics</h2>
+      <p>Track your progress and identify areas for improvement</p>
+    </div>
+  </section>
+
+  <!-- Analytical cards -->
+  <section class="analytics-section">
+    <div class="container">
+      <div class="cards grid-4">
+        <div class="card" style="background-image: linear-gradient(to bottom right, #f1fffa, #aef7de) ;">
+          <div class="card-header">
+            <img src="./Assets/ana1.png">
+            <p>Total</p>
+          </div>
+          <div class="card-content">
+            <h3 id="totalQuestionAttempted">1,247</h3>
+            <p>Questions Attempted</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: linear-gradient(to bottom right,#F1FFFA,#D5F6E4);">
+          <div class="card-header">
+            <img src="./Assets/ana2.png">
+            <p>Accuracy</p>
+          </div>
+          <div class="card-content">
+            <h3 id="accuracy">78.3%</h3>
+            <p>Overall Performance</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: linear-gradient(to bottom right,#FFFBF0,#F9F2D0);">
+          <div class="card-header">
+            <img src="./Assets/ana3.png">
+            <p>Sessions</p>
+          </div>
+          <div class="card-content">
+            <h3 id="sessions">42</h3>
+            <p>Quiz Attempts</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: linear-gradient(to bottom right, #F6FAFD,#F5F6FB);">
+          <div class="card-header">
+            <img src="./Assets/ana4.png">
+            <p>Average Performance</p>
+          </div>
+          <div class="card-content">
+            <h3 id="avgPerformance">3/9</h3>
+            <p>Average Score Per Session</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Analytical charts -->
+  <section class="charts">
+    <div class="container">
+      <div class="main">
+        <div class="card">
+          <section class="progress-section">
+            <div class="container">
+              <div class="progress-card">
+                <div class="progress-header">
+                  <h4>Subject Performance</h4>
+                </div>
+                <div id="subjectPerformanceContainer">
+                </div>
+                <hr>
+                <div class="labels">
+
+                  <div class="progress-label">
+                    <div class="progress-circle" style="background-color: #25a36f;"></div>
+                    <p>Excellent (>75%)</p>
+                  </div>
+                  <div class="progress-label">
+                    <div class="progress-circle" style="background-color: #FFA500;"></div>
+                    <p>Good (50-75%)</p>
+                  </div>
+                  <div class="progress-label">
+                    <div class="progress-circle" style="background-color: #FF0000;"></div>
+                    <p>Needs Work (&lt;50%) </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  </section>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Difficulty Analysis  -->
+  <section class="difficulty-section">
+    <div class="container">
+      <div class="difficulty">
+        <div class="difficulty-header">
+          <h3 style="font-size: 1.5em;">Difficulty Analysis</h3>
+          <p>Performance breakdown by difficulty level</p>
+        </div>
+        <div class="difficulty-cards grid-3">
+          <div class="card">
+            <img src="./Assets/difficulty1.png">
+            <h4>Easy</h4>
+            <p style="font-size: 2em;color: #00A884;font-weight: 600;" id="easy-analysis">89.5%</p>
+            <p id="easyTotalQuestions">456 questions</p>
+            <div class="progrss-bar">
+              <div class="progress">
+                <div class="difficulty-progress-fill" style="background-color:  #00A884;" id="easy-progress"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./Assets/difficulty2.png">
+            <h4>Medium</h4>
+            <p style="font-size: 2em;color: #d57e2c;font-weight: 600;" id="medium-analysis">72.8%</p>
+            <p id="mediumTotalQuestions">523 questions</p>
+            <div class="progrss-bar">
+              <div class="progress">
+                <div class="difficulty-progress-fill" style="background-color:  #d57e2c;" id="medium-progress"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./Assets/difficulty3.png">
+            <h4>Hard</h4>
+            <p style="font-size: 2em;color: #d20000;font-weight: 600;" id="hard-analysis">58.1%</p>
+            <p id="hardTotalQuestions">268 questions</p>
+            <div class="progrss-bar">
+              <div class="progress">
+                <div class="difficulty-progress-fill" style="background-color:  #d20000;" id="hard-progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Ready to Start Quiz  -->
+  <section class="readyToStart">
+    <div class="container">
+      <div class="ready-main">
+        <div class="ready-left">
+          <h3 style="font-size: 1.5em;">Ready to Improve Your Performance?</h3>
+          <p>Take another quiz to continue building your knowledge and track your progress</p>
+        </div>
+        <div class="ready-right">
+          <a href="profile.html">
+            <button class="ready-btn-second btn btn-dark" style="font-size: 1.2em;">View Your Profile</button>
+          </a>
+          <a href="start_quiz.html">
+            <button class="ready-btn-first btn btn-primary" style="font-size: 1.2em;">Start Quiz Now <span
+                style="color:whitesmoke;font-weight: 800;font-size: 1em;">&#8594;</span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+  <div class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 15px;">
+          <img src="./Assets/quiz_logo.jpg" width="22" style="border-radius: 5px;">
+          Smart Quiz
+        </div>
+        <p style="color: gainsboro;">Empowering learners with intelligent quiz platforms and comprehensive analytics for
+          continuous
+          improvement.</p>
+      </div>
+      <div>
+        <h4 style="font-family: 'Times New Roman', Times, serif;font-size: 1.3em;">Quick Links</h4>
+        <a href="home.html" style="color: gainsboro;">Home</a>
+        <a href="start_quiz.html" style="color: gainsboro;">Start Quiz</a>
+        <a href="analytics.html" style="color: gainsboro;">Analytics</a>
+      </div>
+      <div>
+        <h4 style="font-family: 'Times New Roman', Times, serif;font-size: 1.3em;">Get in Touch</h4>
+        <p style="color: gainsboro;">smartwebquiz@gmail.com</p>
+        <p style="color: gainsboro;">+91 9510448344</p>
+      </div>
+    </div>
+  </div>
+  <script src="./js/loader.js"></script>
+  <script src="./script.js"></script>
+  <script src="./js/analytics.js"></script>
+</body>
+
+</html>
