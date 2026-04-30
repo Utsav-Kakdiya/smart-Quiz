@@ -1,9 +1,7 @@
 window.addEventListener("DOMContentLoaded", async () => {
   try {
-
-    const BASE_URL = "https://smart-quiz-1.onrender.com";
     const userEmail = localStorage.getItem("userEmail");
-    const response = await fetch(`${BASE_URL}/analytics-dashboard/${userEmail}`);
+    const response = await fetch(`/analytics-dashboard/${userEmail}`);
     const data = await response.json();
 
     let totalQuestionAttempted = document.getElementById(
