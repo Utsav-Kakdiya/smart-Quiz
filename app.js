@@ -21,7 +21,7 @@ await mongoose.connect(process.env.MONGO_URL);
 console.log("MongoDB connected");
 
 // Sign Up the User
-app.post("/register", async (req, res) => {
+app.post("https://smart-quiz-1.onrender.com/register", async (req, res) => {
   try {
     const { name, phone, email, password } = req.body;
 
@@ -100,7 +100,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
-app.post("/verify-otp", async (req, res) => {
+app.post("https://smart-quiz-1.onrender.com/verify-otp", async (req, res) => {
   const { email, otp } = req.body;
 
   if (!otpStore.has(email)) {
