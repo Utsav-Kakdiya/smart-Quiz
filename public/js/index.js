@@ -59,9 +59,7 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
 function sendDataToDatabase(data) {
   displayLoader("Sending OTP...");
 
-  const BASE_URL = "https://smart-quiz-1.onrender.com";
-
-  fetch(`${BASE_URL}/register`, {
+  fetch("/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
@@ -114,7 +112,7 @@ document
     try {
       displayLoader("Verifying OTP...");
 
-      const res = await fetch(`${BASE_URL}/verify-otp`, {
+      const res = await fetch("/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
