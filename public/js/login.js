@@ -22,7 +22,9 @@ function checkUserInDb(data) {
 
   displayLoader("Verifying login details...");
 
-  fetch("/login", {
+  const BASE_URL = "https://smart-quiz-1.onrender.com";
+
+  fetch(`${BASE_URL}/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
