@@ -59,7 +59,7 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
 function sendDataToDatabase(data) {
   displayLoader("Sending OTP...");
 
-  fetch("/register", {
+  fetch("https://smart-quiz-1.onrender.com/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
